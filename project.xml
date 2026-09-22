@@ -1,11 +1,7 @@
-<project>
-  <lvgl_version>9.2</lvgl_version>
-  <export_name>ecl_report</export_name>
-
-  <displays>
-    <display name="main">
-      <width>800</width>
-      <height>480</height>
-    </display>
-  </displays>
+<project name="ecl_report" lvgl_version="9.2">
+    <targets>
+        <target name="main">
+            <display width="800" height="480"/>
+        </target>
+    </targets>
 </project>
