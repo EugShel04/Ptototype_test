@@ -1,0 +1,98 @@
+<screen>
+  <consts>
+    <string name="screen_title" value="Детализация ECL"/>
+  </consts>
+
+  <view style="screen_bg" flex_flow="column">
+
+    <!-- Шапка -->
+    <view style="header_bar" flex_flow="row" flex_main_axis="space_between" flex_cross_axis="center">
+      <lv_label text="Детализация по сегментам" style_text_font="title"/>
+      <lv_button style="secondary_button">
+        <lv_label text="Назад к сводке"/>
+        <screen_load_event screen="ecl_main" anim_type="over_left" duration="400"/>
+      </lv_button>
+    </view>
+
+    <!-- Контент -->
+    <view flex_flow="column" pad_all="20">
+
+      <!-- Карточка: Корпоративный -->
+      <view style="card" margin_bottom="16" flex_flow="column">
+        <lv_label text="Корпоративный портфель" style_text_font="medium" margin_bottom="12"/>
+
+        <view flex_flow="row" flex_main_axis="space_between" margin_bottom="8">
+          <lv_label text="EAD:" style_text_font="normal"/>
+          <lv_label text="1 250 млн USD" style_text_font="medium"/>
+        </view>
+
+        <view flex_flow="row" flex_main_axis="space_between" margin_bottom="8">
+          <lv_label text="Средневзвешенная PD:" style_text_font="normal"/>
+          <lv_label text="2.4%" style_text_font="medium"/>
+        </view>
+
+        <view flex_flow="row" flex_main_axis="space_between" margin_bottom="8">
+          <lv_label text="Средневзвешенная LGD:" style_text_font="normal"/>
+          <lv_label text="45%" style_text_font="medium"/>
+        </view>
+
+        <view flex_flow="row" flex_main_axis="space_between">
+          <lv_label text="ECL (Stage 1+2+3):" style_text_font="normal"/>
+          <lv_label text="13.5 млн USD" style_text_font="medium" text_color="0x16a34a"/>
+        </view>
+      </view>
+
+      <!-- Карточка: МСБ -->
+      <view style="card" margin_bottom="16" flex_flow="column">
+        <lv_label text="Портфель МСБ" style_text_font="medium" margin_bottom="12"/>
+
+        <view flex_flow="row" flex_main_axis="space_between" margin_bottom="8">
+          <lv_label text="EAD:" style_text_font="normal"/>
+          <lv_label text="680 млн USD" style_text_font="medium"/>
+        </view>
+
+        <view flex_flow="row" flex_main_axis="space_between" margin_bottom="8">
+          <lv_label text="Средневзвешенная PD:" style_text_font="normal"/>
+          <lv_label text="3.1%" style_text_font="medium"/>
+        </view>
+
+        <view flex_flow="row" flex_main_axis="space_between" margin_bottom="8">
+          <lv_label text="Средневзвешенная LGD:" style_text_font="normal"/>
+          <lv_label text="50%" style_text_font="medium"/>
+        </view>
+
+        <view flex_flow="row" flex_main_axis="space_between">
+          <lv_label text="ECL (Stage 1+2+3):" style_text_font="normal"/>
+          <lv_label text="10.5 млн USD" style_text_font="medium" text_color="0xf59e0b"/>
+        </view>
+      </view>
+
+      <!-- Карточка: Розничный -->
+      <view style="card" margin_bottom="16" flex_flow="column">
+        <lv_label text="Розничный портфель" style_text_font="medium" margin_bottom="12"/>
+
+        <view flex_flow="row" flex_main_axis="space_between" margin_bottom="8">
+          <lv_label text="EAD:" style_text_font="normal"/>
+          <lv_label text="2 100 млн USD" style_text_font="medium"/>
+        </view>
+
+        <view flex_flow="row" flex_main_axis="space_between" margin_bottom="8">
+          <lv_label text="Средневзвешенная PD:" style_text_font="normal"/>
+          <lv_label text="1.8%" style_text_font="medium"/>
+        </view>
+
+        <view flex_flow="row" flex_main_axis="space_between" margin_bottom="8">
+          <lv_label text="Средневзвешенная LGD:" style_text_font="normal"/>
+          <lv_label text="35%" style_text_font="medium"/>
+        </view>
+
+        <view flex_flow="row" flex_main_axis="space_between">
+          <lv_label text="ECL (Stage 1+2+3):" style_text_font="normal"/>
+          <lv_label text="13.2 млн USD" style_text_font="medium" text_color="0x2563eb"/>
+        </view>
+      </view>
+
+    </view>
+
+  </view>
+</screen>

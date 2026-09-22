@@ -1,0 +1,116 @@
+<screen>
+  <consts>
+    <string name="screen_title" value="Сводка по ECL"/>
+  </consts>
+
+  <view style="screen_bg" flex_flow="column">
+
+    <!-- Шапка -->
+    <view style="header_bar" flex_flow="row" flex_main_axis="space_between" flex_cross_axis="center">
+      <lv_label text="#app_title" style_text_font="title"/>
+      <lv_label text="#report_subtitle" style_text_font="small" text_color="0x94a3b8"/>
+    </view>
+
+    <!-- Основной контент -->
+    <view flex_flow="column" pad_all="20">
+
+      <!-- Фильтры -->
+      <view style="card" flex_flow="row" flex_main_axis="space_between" flex_cross_axis="center" margin_bottom="16">
+        <lv_label text="Портфель: Корпоративный" style_text_font="normal"/>
+        <lv_label text="Дата отчёта: 30.06.2026" style_text_font="normal"/>
+        <lv_button style="secondary_button">
+          <lv_label text="Экспорт"/>
+        </lv_button>
+      </view>
+
+      <!-- Карточки с метриками -->
+      <view flex_flow="row" flex_main_axis="space_between" margin_bottom="20">
+        
+        <!-- ECL Stage 1 -->
+        <view width="220" height="120" style="metric_card" flex_flow="column">
+          <lv_label text="ECL Stage 1" style_text_font="medium" margin_bottom="8"/>
+          <lv_label text="12.4 млн USD" style_text_font="title" text_color="0x16a34a"/>
+          <lv_label text="12‑месячный ECL" style_text_font="small" text_color="0x64748b" margin_top="4"/>
+        </view>
+
+        <!-- ECL Stage 2 -->
+        <view width="220" height="120" style="metric_card" flex_flow="column">
+          <lv_label text="ECL Stage 2" style_text_font="medium" margin_bottom="8"/>
+          <lv_label text="45.8 млн USD" style_text_font="title" text_color="0xf59e0b"/>
+          <lv_label text="Срок жизни, SICR" style_text_font="small" text_color="0x64748b" margin_top="4"/>
+        </view>
+
+        <!-- ECL Stage 3 -->
+        <view width="220" height="120" style="metric_card" flex_flow="column">
+          <lv_label text="ECL Stage 3" style_text_font="medium" margin_bottom="8"/>
+          <lv_label text="23.1 млн USD" style_text_font="title" text_color="0xdc2626"/>
+          <lv_label text="Дефолтные экспозиции" style_text_font="small" text_color="0x64748b" margin_top="4"/>
+        </view>
+
+      </view>
+
+      <!-- Заголовок таблицы -->
+      <lv_label text="Сводка по сегментам" style_text_font="medium" margin_bottom="8"/>
+
+      <!-- Таблица‑подобная структура -->
+      <view style="card" flex_flow="column">
+
+        <!-- Заголовки колонок -->
+        <view flex_flow="row" style="table_header">
+          <lv_label text="Сегмент" width="200"/>
+          <lv_label text="EAD (млн)" width="120"/>
+          <lv_label text="PD (%)" width="100"/>
+          <lv_label text="LGD (%)" width="100"/>
+          <lv_label text="ECL (млн)" width="120"/>
+        </view>
+
+        <!-- Строка 1 -->
+        <view flex_flow="row" style="table_row" border_bottom_width="1" border_bottom_color="0xe2e8f0">
+          <lv_label text="Корпоративный" width="200"/>
+          <lv_label text="1 250" width="120"/>
+          <lv_label text="2.4" width="100"/>
+          <lv_label text="45" width="100"/>
+          <lv_label text="13.5" width="120"/>
+        </view>
+
+        <!-- Строка 2 -->
+        <view flex_flow="row" style="table_row" border_bottom_width="1" border_bottom_color="0xe2e8f0">
+          <lv_label text="МСБ" width="200"/>
+          <lv_label text="680" width="120"/>
+          <lv_label text="3.1" width="100"/>
+          <lv_label text="50" width="100"/>
+          <lv_label text="10.5" width="120"/>
+        </view>
+
+        <!-- Строка 3 -->
+        <view flex_flow="row" style="table_row" border_bottom_width="1" border_bottom_color="0xe2e8f0">
+          <lv_label text="Розничный" width="200"/>
+          <lv_label text="2 100" width="120"/>
+          <lv_label text="1.8" width="100"/>
+          <lv_label text="35" width="100"/>
+          <lv_label text="13.2" width="120"/>
+        </view>
+
+        <!-- Итого -->
+        <view flex_flow="row" style="table_header">
+          <lv_label text="Итого" width="200"/>
+          <lv_label text="4 030" width="120"/>
+          <lv_label text="—" width="100"/>
+          <lv_label text="—" width="100"/>
+          <lv_label text="37.2" width="120"/>
+        </view>
+
+      </view>
+
+      <!-- Кнопка детализации -->
+      <view flex_flow="row" flex_main_axis="end" margin_top="20">
+        <lv_button style="primary_button">
+          <lv_label text="Детализация по сегментам"/>
+          <screen_load_event screen="ecl_details" anim_type="over_right" duration="400"/>
+        </lv_button>
+      </view>
+
+    </view>
+
+  </view>
+</screen>
