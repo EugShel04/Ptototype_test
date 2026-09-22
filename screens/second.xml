@@ -1,0 +1,12 @@
+<screen>
+    <view style="screen_bg" flex_flow="column" flex_main_axis="center" flex_cross_axis="center">
+
+        <lv_label text="Второй экран" style_text_font="title" margin_bottom="20"/>
+
+        <lv_button style="primary_button">
+            <lv_label text="Назад"/>
+            <screen_load_event screen="main" anim_type="over_right" duration="300"/>
+        </lv_button>
+
+    </view>
+</screen>
