@@ -1,7 +1,7 @@
-<project name="ecl_report" lvgl_version="9.2">
+<project name="demo" lvgl_version="9.2">
     <targets>
         <target name="main">
-            <display width="800" height="480"/>
+            <display width="480" height="320"/>
         </target>
     </targets>
 </project>
