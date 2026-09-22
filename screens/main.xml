@@ -1,0 +1,16 @@
+<screen>
+    <view style="screen_bg" flex_flow="column" flex_main_axis="center" flex_cross_axis="center">
+
+        <lv_label text="Главный экран" style_text_font="title" margin_bottom="20"/>
+
+        <lv_button style="primary_button" margin_bottom="12">
+            <lv_label text="Перейти на второй экран"/>
+            <screen_load_event screen="second" anim_type="over_left" duration="300"/>
+        </lv_button>
+
+        <lv_button style="secondary_button">
+            <lv_label text="Ничего не делать"/>
+        </lv_button>
+
+    </view>
+</screen>
